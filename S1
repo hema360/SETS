@@ -1,0 +1,22 @@
+'''1) Write a program to get n number of values in separate line for set and print the values with space separation.
+Sample Input:
+5
+3
+1
+4
+5
+2'''
+PROGRAM:
+# Read the number of values
+n = int(input("Enter the number of values: "))
+
+# Initialize a set to store unique values
+unique_values = set()
+
+# Read n values from the user
+for _ in range(n):
+    value = int(input())
+    unique_values.add(value)
+
+# Convert the set to a sorted list and print the values space-separated
+print(" ".join(map(str, sorted(unique_values))))
