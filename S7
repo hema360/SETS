@@ -1,0 +1,24 @@
+'''7) Write a program to find the maximum and minimum value of given set values.
+Sample Input:
+1 2 3 4 5
+Sample Output:
+Maximum: 5
+Minimum: 1'''
+Progam:
+def find_max_min(numbers):
+    # Split the input string into a list of integers
+    num_list = list(map(int, numbers.split()))
+    
+    # Find maximum and minimum values
+    maximum = max(num_list)
+    minimum = min(num_list)
+    
+    return maximum, minimum
+
+# Sample Input
+input_values = "1 2 3 4 5"
+maximum, minimum = find_max_min(input_values)
+
+# Sample Output
+print(f"Maximum: {maximum}")
+print(f"Minimum: {minimum}")
