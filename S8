@@ -1,0 +1,24 @@
+'''8) Write a program to update the given set in another set.
+Sample Input:
+1 2 3
+3 4 5
+Sample Output:
+1 2 3 4 5'''
+PROGRAM:
+def update_set(set1, set2):
+    # Convert input strings into sets of integers
+    s1 = set(map(int, set1.split()))
+    s2 = set(map(int, set2.split()))
+    
+    # Update set1 with elements from set2
+    s1.update(s2)
+    
+    return s1
+
+# Sample Input
+input_set1 = "1 2 3"
+input_set2 = "3 4 5"
+result_set = update_set(input_set1, input_set2)
+
+# Sample Output
+print(" ".join(map(str, sorted(result_set))))
