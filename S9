@@ -1,0 +1,40 @@
+'''9) Write a program to get set values in a single line with space(including duplicate values) and find the number of duplicate values given during input and print the output set value without duplicate elements.
+Sample Input:
+6
+1
+2
+1
+2
+3
+1
+Sample Output:
+Duplicate Values: 3
+1 2 3 '''
+program:
+def process_values(input_values):
+    # Split the input string and convert to integers
+    numbers = list(map(int, input_values.split()))
+    
+    # Count duplicates using a dictionary
+    count = {}
+    for num in numbers:
+        if num in count:
+            count[num] += 1
+        else:
+            count[num] = 1
+            
+    # Calculate number of duplicate values
+    duplicate_count = sum(1 for v in count.values() if v > 1)
+    
+    # Create a set of unique values
+    unique_values = set(numbers)
+    
+    return duplicate_count, unique_values
+
+# Sample Input
+input_values = "1 2 1 2 3 1"
+duplicate_count, unique_values = process_values(input_values)
+
+# Sample Output
+print(f"Duplicate Values: {duplicate_count}")
+print(" ".join(map(str, sorted(unique_values))))
