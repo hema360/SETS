@@ -1,0 +1,22 @@
+'''3) Write a program to print only the different values between two given sets.
+Sample Input:
+1 2 3 4
+2 4 6 8
+Sample Output:
+1 3
+Note: There are trailing spaces at the end of output.'''
+PROGRAM:
+# Read input for the first set
+set1_input = input("Enter the first set of values separated by space: ")
+set1 = set(map(int, set1_input.split()))
+
+# Read input for the second set
+set2_input = input("Enter the second set of values separated by space: ")
+set2 = set(map(int, set2_input.split()))
+
+# Find the symmetric difference between the two sets
+different_values = set1.symmetric_difference(set2)
+
+# Convert the result to a sorted list
+sorted_different_values = sorted(different_values)
+
